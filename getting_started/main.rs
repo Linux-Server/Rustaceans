@@ -36,3 +36,15 @@ fn main() {
     // each line should end with a semicolom
     println!("Welcome to getting started!");
 }
+
+
+/*
+///COMPILING AND RUN
+1. bfore running any program , u should compile the prgarm to generate the excutable file
+2.  rustc main.rs
+3. which will generate the binary executable
+4. if are more familiar with dynamic programming lang such, Ruby,Python and JS , you mignt not doing the compiling and running seprately
+5. Rust is ahead of time lang that mean you cancmpile your program give the executable to someone else , where thay can run the exec on their system without even rust installed on their system
+6.just compile is is enogh for simple programs as your project grows, you should use more sophisticated approach like cargo 
+
+*/
