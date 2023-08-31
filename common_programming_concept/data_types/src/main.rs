@@ -31,18 +31,24 @@
 
 fn main() {
     // here we need to give an explicit type for guess variables
-   let guess = "42".parse().expect("Unable to parse");
+   let guess:u32 = "42".parse().expect("Unable to parse");
    // example of tuple
    let tup = (10,true,6.7);
    //to take value out of tuple, we should use pattern matching to destructute
-   let (x,y,z) = tup //destructuring a tuple
+   let (x,y,z) = tup; //destructuring a tuple
    //another way of getting value out of tuple is using periods(.)
    let one = tup.0;
 
 
    ///Array
-   let x = [1,2,3,4,5]; //array holds same type of data
+   let x: [i32;5] = [1,2,3,4,5]; //array holds same type of data
+   //rust array have fixed length, cannot grow, cannot shrink
+   //array are useful, when u want to store data on stack rather than heap
+   // array is smimlar as vector, which can grow and shrink
+   
+   let custom_arr = [3;5]; // output => [3,3,3,3,3]
 
+   let first = custom_arr[0]; // array is stored on stack
 }
 
 /*
