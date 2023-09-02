@@ -4,7 +4,7 @@ fn main(){
     let res;
     {
         let y = 10; 
-        res = longest(&x, &y);
+        res = longest(&x);
     }
 
     println!("{:?}", res); //reference is must not outlive value of lifetime
@@ -12,6 +12,6 @@ fn main(){
 }
 
 
-fn longest<'a>(x:&'a i32, y:&i32)->&'a i32{
+fn longest(x:&i32)->&i32{
     x  // smallest lifetime of y
 }
