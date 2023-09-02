@@ -1,25 +1,17 @@
-fn main() {
-    println!("Hello, world!");
-    let x = 20;//stack
-    let res; 
-    {
-        let y: i32 = 10;//stack
-        res = longest(&x, &y);
-        
-    }//y invalid
+fn main(){
 
-    println!("{res}"); //valdit
- 
+    let x =20;
+    let res;
+    {
+        let y = 10; 
+        res = longest(&x);
+    }
+
+    println!("{:?}", res); //reference is must not outlive value of lifetime
+
 }
 
-// lifetime is checking wheater a ref is valid till its final usage has been completed
-fn longest<'a>(x:&'a i32, y:&'a i32)-> &'a i32{  //
-    if x > y{
-        println!("X is greater");
-        x
 
-    }else{
-        println!("Y is greater");
-        y
-    }
+fn longest(x:&i32)->&i32{
+    x  // smallest lifetime of y
 }
