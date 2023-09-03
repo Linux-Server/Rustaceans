@@ -1,12 +1,16 @@
 use std::env;
 use std::fs;
+use std::process;
 
 
 fn main() {
 
     let args: Vec<String> = env::args().collect();
     println!("Args : {:?}", args);  // args[0] is the anme of the program
-    let config= Config::new(&args);
+    let config= Config::build(&args).unwrap_or_else(|err|{
+        println!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
    
     //cargo run -- sam ram
     println!("Query passed : {:?}", config.query);  
@@ -30,7 +34,10 @@ struct Config{
 }
 
 impl Config{
-    fn new(args: &[String])->Config{
-        Config { query: args[1].clone(), file_path: args[2].clone() }
+    fn build(args: &[String])->Result<Config,&str>{
+        if args.len() < 3 {
+            return Err("not enogh args")
+        }
+        Ok(Config { query: args[1].clone(), file_path: args[2].clone() })
     }
 }
