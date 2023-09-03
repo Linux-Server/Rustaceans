@@ -1,6 +1,7 @@
 use std::env;
 use std::fs;
 use std::process;
+use std::error::Error;
 
 
 fn main() {
@@ -15,14 +16,22 @@ fn main() {
     //cargo run -- sam ram
     println!("Query passed : {:?}", config.query);  
     println!("File name : {:?}", config.file_path);
+    if let Err(e) = run(config){
+        println!("Apllication error, {:?}",e);
+        process::exit(1);
+    }
 
+
+
+}
+
+fn run(config:Config)-> Result<(), Box<dyn Error>>{
     //open the file and read string
     // this should be error handled properly
-    let contents = fs::read_to_string("poem.txt").expect("Unable to read file");
+    let contents = fs::read_to_string(config.file_path)?;
 
     println!("The contents : {:?}", contents);
-
-
+    Ok(())
 }
 
 
