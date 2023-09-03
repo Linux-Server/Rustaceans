@@ -1,4 +1,6 @@
 use std::env;
+use std::fs;
+
 
 fn main() {
 
@@ -10,6 +12,11 @@ fn main() {
 //cargo run -- sam ram
     println!("Query passed : {:?}", query);  
     println!("File name : {:?}", file_path);
+
+    //open the file and read string
+    let contents = fs::read_to_string("poem.txt");
+
+    println!("The contents : {:?}", contents);
 
 
 }
