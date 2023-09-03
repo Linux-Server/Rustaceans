@@ -6,7 +6,7 @@ fn main() {
 
     let args: Vec<String> = env::args().collect();
     println!("Args : {:?}", args);  // args[0] is the anme of the program
-    let config= parse_config(&args);
+    let config= Config::new(&args);
    
     //cargo run -- sam ram
     println!("Query passed : {:?}", config.query);  
@@ -22,14 +22,15 @@ fn main() {
 }
 
 
-fn parse_config(args: &[String])->Config{
-    let query = args[1].clone();
-    let file_path = args[2].clome();
-    Config{query,file_path}
 
-}
 
 struct Config{
     query:String,
     file_path: String
+}
+
+impl Config{
+    fn new(args: &[String])->Config{
+        Config { query: args[1].clone(), file_path: args[2].clone() }
+    }
 }
