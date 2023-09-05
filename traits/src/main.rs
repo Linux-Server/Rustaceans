@@ -30,7 +30,6 @@ struct Person{
 
 impl Summary for Person{
     fn summarize(&self)-> String {
-        let name = self.name.trim();
-        format!("My name is {:?} and age is {:?}", name,self.age)
+        format!("My name is {} and age is {}", self.name,self.age)
     }
 }
