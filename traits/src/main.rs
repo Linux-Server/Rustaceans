@@ -15,12 +15,17 @@ fn main(){
 
   let data = person_one.summarize();
   println!("{:?}", data);
+  person_one.fall_back();
 
 
 }
 
 trait Summary{
     fn summarize(&self)-> String;
+    //Default implementations
+    fn fall_back(&self)->String{
+        format!("Im back")
+    }
 }
 
 struct Person{
@@ -30,6 +35,6 @@ struct Person{
 
 impl Summary for Person{
     fn summarize(&self)-> String {
-        format!("My name is {} and age is {}", self.name,self.age)
+        format!("My name is {:?} and age is {:?}", self.name,self.age)
     }
 }
