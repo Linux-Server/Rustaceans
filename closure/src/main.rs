@@ -6,9 +6,18 @@ Its an anonymous func that can be saved on varibale and pass as a function argum
 */
 
 fn main() {
-    println!("Hello, Closure!");
 // closure returning an i32 value
-    let my_closure = || 10;
-    let x = my_closure();
-    println!("The closure {:?}", x);
+  let mut x: String ="sam".to_string(); // owned value
+  let y =20; //
+  let my_closure = || {
+                                       let y: String = x;
+                                        
+                                     };
+
+   println!("{:?}", x);
+
+//   let z: String = my_closure();
+  
+
+
 }
