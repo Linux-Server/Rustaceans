@@ -7,9 +7,12 @@ fn main(){
     let res = inventory.give_away(user1);
     println!("The res is {:?}", res);
 
-x
+    let x = "sam".to_string();
+    let y = ||  x;   //  Fn -> trait
+
 
 }
+
 struct Shirts{
     shirt: Vec<ShirtColor>
 }
