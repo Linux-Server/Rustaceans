@@ -15,22 +15,25 @@ fn main(){
 
   let data = person_one.summarize();
   println!("{:?}", data);
+//   person_one.fall_back();
 
 
 }
 
-trait Summary{
-    fn summarize(&self)-> String;
-}
+pub trait Summary {
+    fn summarize_author(&self) -> String;
 
+    fn summarize(&self) -> String {
+        format!("(Read more from {}...)", self.summarize_author())
+    }
+}
 struct Person{
     name:String,
     age: u32
 }
 
-impl Summary for Person{
-    fn summarize(&self)-> String {
-        let name = self.name.trim();
-        format!("My name is {:?} and age is {:?}", name,self.age)
+impl Summary for Person {
+    fn summarize_author(&self) -> String {
+        format!("@{}", self.name)
     }
 }
