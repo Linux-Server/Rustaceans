@@ -2,7 +2,7 @@ fn main(){
 
     let inventory = Shirts{shirt: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue]} ;
 
-    let user1 = None;
+    let user1 = Some(ShirtColor::Red);
     // let user2 = None;
     let res = inventory.give_away(user1);
     println!("The res is {:?}", res);
@@ -25,7 +25,10 @@ enum ShirtColor{
 
 impl Shirts{
     fn give_away(&self, user_pref: Option<ShirtColor>)->ShirtColor{
-        user_pref.unwrap_or_else(||  self.random_choice())
+        match user_pref{
+            Some(val) => return val,
+            None => return self.random_choice()
+        }
 
     }
 
