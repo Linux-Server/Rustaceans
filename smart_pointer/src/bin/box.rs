@@ -1,3 +1,5 @@
+use crate::List::{Cons, Nil};
+
 fn main(){
     /*
     -Box smaet pointer allow u to store data on heap rather than stack
@@ -11,6 +13,22 @@ fn main(){
     
      */
 
-    let a = Box::new(10);
+    let a = Box::new(10);  // data is allocated on heap and pointer is stored on stack
     println!("The value of a is {:?}", a);
+
+    // Example for recursive types
+    /*
+    - recuresive type : can have another value of same type
+    - Boxes provide only the indirection and heap allocation
+    
+     */
+    let list = Cons(1, Cons(2, Cons(3, Nil)));
+
+
+
+}
+
+enum List {
+    Cons(i32, List),
+    Nil,
 }
