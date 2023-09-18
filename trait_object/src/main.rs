@@ -1,7 +1,11 @@
 fn main() {
     println!("welcome to trait object");
-    let books: Vec<Box<dyn Color>> = vec![Box::new(1), Box::new(true)]; // annotation required
-    let book_one =  Book{name:books };
+    // let books: Vec<Box<dyn Color>> = vec![Box::new(1), Box::new(true)]; // annotation required
+    // let book_one =  Book{name:books };
+
+    let books = vec![Box::new(10), Box::new(true)];
+
+
 }
 
 
@@ -16,8 +20,8 @@ trait Color{
     }
 }
 
-impl Color for i32{}
-impl Color for bool{}
+// impl Color for i32{}
+// impl Color for bool{}
 
 
 // impl<T> Book<T>{
