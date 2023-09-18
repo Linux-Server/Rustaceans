@@ -1,7 +1,7 @@
 fn main() {
     println!("welcome to trait object");
-    let books = vec![Box::new(1), Box::new(true)];
-    // let book_one =  Book{name:books };
+    let books: Vec<Box<dyn Color>> = vec![Box::new(1), Box::new(true)]; // annotation required
+    let book_one =  Book{name:books };
 }
 
 
