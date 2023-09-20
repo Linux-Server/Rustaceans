@@ -10,6 +10,17 @@ fn main(){
 
     let Person1 {name} = person1;
 
+
+    let point_one = Point{x:10,y:7};
+
+    match point_one{
+        Point { x, y: 0 } => println!("On the x axis at {x}"),
+        Point { x: 0, y } => println!("On the y axis at {y}"),
+        Point { x, y } => {
+            println!("On neither axis: ({x}, {y})");
+        }
+    }
+
 }
 #[derive(Debug)]
 struct Person{
@@ -19,4 +30,9 @@ struct Person{
 #[derive(Debug)]
 struct Person1{
     name:String
+}
+
+struct Point{
+    x:i32,
+    y:i32
 }
