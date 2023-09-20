@@ -6,7 +6,6 @@ fn main(){
 
     // check Box with vector
 
-    Myvector.0.push(20)
 
     //  my_vector.push(a);
     //  my_vector.push(3)
@@ -14,6 +13,10 @@ fn main(){
 
 
 struct Myvector<T>(Vec<T>);
+
+impl<T> Myvector<T>{
+    fn
+}
 
 /*
 
