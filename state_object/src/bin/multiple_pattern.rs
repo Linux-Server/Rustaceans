@@ -37,6 +37,23 @@ fn main(){
         
     }
 
+    //MATCH GUARD -- adds an additional if condition in arms
+
+    let num  = Some(10);
+
+    match num{
+        Some(num) if num+1 == 11 => println!("Its a perfect match {num}"),
+        _ => ()
+    }
+
+
+    let x = 4;
+    let y = false;
+
+    match x {
+        4 | 5 | 6 if y => println!("yes"),
+        _ => println!("no"),
+    }
 
 }
 
