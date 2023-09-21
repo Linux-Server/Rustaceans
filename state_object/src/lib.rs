@@ -17,7 +17,7 @@ impl Post{
 
 
 pub trait State{
-     fn req_review()
+    
 }
 
 struct Draft{}
