@@ -12,8 +12,16 @@ fn main() {
 
     unsafe{
       println!("the value of {:?}", *z);
+       text();
 
     }
 
+   
 
+
+}
+
+
+unsafe fn text(){
+    println!("Im a unsafe function name text");
 }
