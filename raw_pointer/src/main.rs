@@ -6,6 +6,14 @@ fn main() {
     let y  = &x as *const i32;
     let z = &mut x as *mut i32;
 
-    println!("the value of {:?} and {:?}", y,z);
+    let address = 0x012345usize;
+    let r = address as *const i32;
+
+
+    unsafe{
+      println!("the value of {:?}", *z);
+
+    }
+
 
 }
