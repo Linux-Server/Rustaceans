@@ -18,7 +18,7 @@ struct Round{
 
 impl Add<Round> for Point{
     type Output = Point;
-    fn add(self, rhs: Round) -> Self::Output {
+    fn add(self, rhs: Round) -> Point {
         Point{
             x: self.x + rhs.x,
             y: self.y + rhs.y 
