@@ -12,3 +12,13 @@ fn main() {
 }
 
 
+#[cfg(test)]
+mod test{
+    #[test]
+    fn tester_in_town(){
+        println!("The new tester reached the town");
+        assert!(true)
+    }
+}
+
+
