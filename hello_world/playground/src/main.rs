@@ -14,10 +14,12 @@ fn main() {
 
 #[cfg(test)]
 mod test{
+    use super::*;
     #[test]
     fn tester_in_town(){
         println!("The new tester reached the town");
-        assert!(true)
+        assert!(true);
+        let x = sub(2);
     }
 }
 
