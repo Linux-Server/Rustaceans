@@ -25,6 +25,22 @@ fn check_under_five(num:i32)-> GivenResult<i32, &'static str>{
     }
 }
 
+fn check_under_five_built_in(num:i32)-> Result<i32, &'static str>{
+    if num<5{
+        Ok(num)
+    }else {
+        Err("Its an error")
+    }
+}
+
+fn find_reminder(num:i32)-> Option<i32>{
+    if num%2 == 0{
+        None
+    }else{
+        Some(num%2)
+    }
+}
+
 #[cfg(test)]
 
 mod test{
@@ -38,6 +54,10 @@ mod test{
     fn test_enums(){
         let under_five = check_under_five(20);
         dbg!(under_five);
+        let under_five_built_in = check_under_five_built_in(20).unwrap();
+        dbg!(under_five_built_in);
+        let reminder = find_reminder(11);
+        dbg!(reminder);
     }
 
 }
