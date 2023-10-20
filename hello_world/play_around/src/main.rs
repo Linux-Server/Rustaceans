@@ -1,6 +1,5 @@
-mod m1_enums;
+mod m2_structs;
 
-
-fn main(){
+fn main() {
     println!("hello intermediate");
 }

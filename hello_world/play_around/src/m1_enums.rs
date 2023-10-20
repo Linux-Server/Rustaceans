@@ -56,7 +56,7 @@ mod test{
         dbg!(under_five);
         let under_five_built_in = check_under_five_built_in(20).unwrap();
         dbg!(under_five_built_in);
-        let reminder = find_reminder(11);
+        let reminder = find_reminder(10);
         dbg!(reminder);
     }
 
