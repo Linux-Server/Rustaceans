@@ -1,20 +1,25 @@
-use List1::{Cons,Nil};
+#![allow(unused_variables)]
+
+use List::{Cons,Nil};
+
 
 fn main(){
     println!("Reference count");
-    // let a = Cons(1,Box::new(Cons(2,Box::new(Nil))));
+    let a = Cons(1,Box::new(Cons(2,Box::new(Nil))));
     let node1 = List1::Cons(1, &List1::Cons(2, &List1::Nil));
 
-    println!("the value is {:?}", node1);
+    println!("the value Box is {:?}", a);
+    println!("the value Refrence with lifetime is is {:?}", node1);
+
 }
 
 
 
-// #[derive(Debug)]
-// enum List{
-//     Cons(i32, Box<List>),
-//     Nil
-// }
+#[derive(Debug)]
+enum List{
+    Cons(i32, Box<List>),
+    Nil
+}
 
 #[derive(Debug)]
 enum List1<'a>{
