@@ -1,3 +1,7 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
+
+
 use proc_macro::TokenStream;
 use quote::quote;
 use syn;
