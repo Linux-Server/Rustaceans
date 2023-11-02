@@ -1,7 +1,11 @@
+use crate::identitys;
 fn main(){
     // sachin!(10+20, 33+44);
     // anju!(10,30,55,);
-    multiples!(1,2);
+    // multiples!(a:1,b:2);
+    let num = 30;
+    identitys!(num);
+
 
 }
 
@@ -28,13 +32,21 @@ macro_rules! anju{
 
 #[macro_export]
 macro_rules! multiples{
-    ($a:expr)=>{
+    (a:$a:expr)=>{
         println!("The one args are {:?}",$a);
 
     };
-    ($a:expr ,$b:expr)=>{
+    (a:$a:expr ,b:$b:expr)=>{
         println!("The two args are {:?} and {:?}", $a, $b);
 
+    }
+}
+
+
+#[macro_export]
+macro_rules! identitys{
+    ($num:ident)=>{
+        println!("The identity is {:?}", $num);
     }
 }
 //U BROKE THE RULE, DUMBASS
