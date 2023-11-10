@@ -43,10 +43,10 @@ fn union_connect(my_array:&mut Vec<usize>, a:usize, b:usize){
     let aid = my_array[a]; //1
     let bid = my_array[b]; //3
 
-   for i in 0..my_array.len(){
+   for (i,val) in my_array.iter().enumerate(){
       
-      if aid == bid {
-         my_array[a] = bid;
+      if my_array[i] == bid {
+         my_array[i] = bid;
       }
 
    }
