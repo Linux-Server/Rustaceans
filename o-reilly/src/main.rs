@@ -1,5 +1,16 @@
+
+/// #Euclids Algorithm
+/// -There are bmany ways to formalise euclids algo
+/// ```
+/// let x =10;
+/// ```
+/// * Ok its a test
+/// * Never again
+/// * For sure
 fn main(){
-   //Euclids Algorithm
+    //
+    //! will check
+
    let x:u128 =400000000000000000000000000000000000;
    let y: u128 = 10000000000000000000000000000;
    let res = gcd(x,y);
