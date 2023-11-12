@@ -1,18 +1,16 @@
 /// HEllo Ist sachin
 
-fn main(){
-    let x = vec![0,1,2,3,4,5,6];
+fn main() {
+    let x = vec![0, 1, 2, 3, 4, 5, 6];
     let target = 10;
     let mut tmp = x[0];
-    for (index, val) in x.iter().enumerate(){
-        if index > 0{
-            let check = tmp+ val;
-            if check == target{
+    for (index, val) in x.iter().enumerate() {
+        if index > 0 {
+            let check = tmp + val;
+            if check == target {
                 break;
             }
         }
-        
-
     }
 }
 
