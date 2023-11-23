@@ -4,9 +4,14 @@ fn main(){
     let x = &5;
     let y = Box::new(x);
     println!("its a deref test, {:?}", y);
-
      assert_eq!(*x,**y);
 
+    let a = MyBox::new("19".to_string());
+    let b = "19";
+
+    let z = a.deref();
+    let z = z.deref();
+    assert_eq!(b, *a); //&String
 }
 
 struct MyBox<T>(T, i32);
