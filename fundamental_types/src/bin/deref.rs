@@ -7,11 +7,17 @@ fn main(){
      assert_eq!(*x,**y);
 
     let a = MyBox::new("19".to_string());
-    let b = "19";
-
-    let z = a.deref();
-    let z = z.deref();
+     let b = "19";
+    //
+    // let z = a.deref();
+    // let z = z.deref();
     assert_eq!(b, *a); //&String
+    let m = MyBox::new(String::from("Rust"));
+    hello(&m);
+}
+
+fn hello(name: &str) {
+    println!("Hello, {name}!");
 }
 
 struct MyBox<T>(T, i32);
