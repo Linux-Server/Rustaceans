@@ -1,14 +1,12 @@
 use std::time::{Instant};
 fn main() {
-    println!("the benchmark of rust");
+    let mut count = 1;
+    tester(&mut count);
+
+}
+fn tester(count: &mut i32){
+    println!("the benchmark of rust {:?}", count);
     let mut my_vec = (1..100).rev().collect::<Vec<i32>>();
-    println!("{:?}",my_vec);
-    let start_time = Instant::now();
-
-     my_vec.sort();
-
-    let elspsed_time = start_time.elapsed();
-
-    println!("The running time is {:?}", elspsed_time);
-
+    my_vec.sort();
+    *count += 1;
 }
