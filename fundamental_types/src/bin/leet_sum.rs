@@ -1,11 +1,10 @@
 fn main() {
     println!("the leet sum");
-    let nums = vec![1,4,3,8,6,7,5];
-    let target = 4;
-    for (i,val) in nums.iter().enumerate(){
+    let nums = vec![1, 4, 3, 8, 6, 7, 5];
+    let _target = 4;
+    for (i, val) in nums.iter().enumerate() {
         println!("The value is {:?} and {:?}", val, i);
     }
-
 }
 
 /*

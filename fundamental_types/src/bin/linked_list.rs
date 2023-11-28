@@ -1,15 +1,24 @@
-use crate::List::{Cons,Nil};
 fn main() {
-    let  a = 10;
+    println!("The inked list activated");
+    let n1= LinkedList::new();
 
-    let x = Cons(10,Box::new(Cons(20,Box::new(Nil))));
-
-    eprintln!("the data is : {:?}", x);
 
 }
 
 #[derive(Debug)]
-enum List{
-    Cons(i32, Box<List>),
-    Nil
+struct Node {
+    data: i32,
+    next: Option<Box<Node>>
+}
+
+struct LinkedList{
+    head: Option<Node>
+}
+
+impl LinkedList{
+    fn new()->LinkedList{
+        Self{
+            head:None
+        }
+    }
 }
