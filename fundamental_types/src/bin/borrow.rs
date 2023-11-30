@@ -10,6 +10,4 @@ fn main() {
     println!("The immut borrow {:?}", immut_borrow);
 
     assert_eq!(10, **immut_borrow);
-
-
 }

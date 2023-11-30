@@ -10,9 +10,8 @@ fn tester(count: &mut i32) {
     let mut my_vec = (1..100).rev().collect::<Vec<i32>>();
     my_vec.sort();
     *count += 1;
-
 }
 
-struct Point{
-    num:i32
+struct Point {
+    num: i32,
 }
