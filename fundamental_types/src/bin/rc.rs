@@ -20,9 +20,11 @@ fn test_list(){
     let box_list = Cons(1, Box::new(Cons(2, Box::new(Nil))));
     println!("The Box list is {:?}", box_list);
 
-    let rc_list = Rc::new(Cons1(1,Rc::new(Cons1(2, Rc::new(Nil1)))));
+    // let rc_list = Rc::new(Cons1(1,Rc::new(Cons1(2, Rc::new(Nil1)))));
 
-
+    let mut a = Rc::new(10);
+    // let b = Rc::clone(&a);
+    *a = 22;
 
 }
 
