@@ -20,8 +20,20 @@ impl Summary for Person{
     }
 }
 
+impl SummaryOne for Person{
+    fn tester(data: String) -> String {
+        format!("{:?}", data)
+    }
+
+}
+
 pub trait Summary {
     fn details(&self)-> String;
 
     fn tester(data: String) -> String;
+}
+
+pub trait SummaryOne{
+    fn tester(data: String) -> String;
+
 }
