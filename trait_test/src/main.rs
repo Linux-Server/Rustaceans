@@ -3,19 +3,18 @@ use trait_test::Person;
 
 mod generic_person;
 mod trait_person;
+mod advanced;
 mod generic_trait_person;
 use generic_person::Person as Gperson;
 use trait_person::{Person as Tperson, Summary, SummaryOne};
 use generic_trait_person::{Person as GTperson, Summary as GTSummary};
+use crate::advanced::one::Sachin;
 
 
 fn main() {
-    let x = GTperson::new(200);
-    println!("the GT instance {:?}", x);
-    let y = x.details();
-    println!("The y is {:?}", y);
-    let z = GTperson::<String>::tester("ram".to_string());
-    println!("The associate {:?}", z);
+
+    let x = Sachin{name:"Killer".to_string()};
+
 
 }
 
@@ -45,4 +44,13 @@ fn test3(){
 
     let t = <Tperson as Summary>::tester("raymond".to_string());
     println!("The tester is {:?}", t);
+}
+
+fn test4(){
+    let x = GTperson::new(200);
+    println!("the GT instance {:?}", x);
+    let y = x.details();
+    println!("The y is {:?}", y);
+    let z = GTperson::<String>::tester("ram".to_string());
+    println!("The associate {:?}", z);
 }
