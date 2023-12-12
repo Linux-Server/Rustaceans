@@ -3,7 +3,7 @@ fn main() {
     let a = Dog::baby();
     println!("The a is {:?}", a);
 
-    let b = <Dog as Animal>::baby();
+    let b =  <Dog as Animal>::baby();
     println!("The b is {:?}", b);
 
     let c = Dog.baby1();
