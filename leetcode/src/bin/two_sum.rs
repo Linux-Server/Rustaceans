@@ -14,6 +14,8 @@ fn two_sum(nums:Vec<i32>, target:i32)->Vec<i32>{
     // ex: [3,4,5] and target=9  => result = [1,2]
          //3 =>9-3 = 6,0
          //4 =>9-4 = 5,1
+    let x = vec![vec![1,2],vec![3,4],vec![6,7]];
+    println!("The vec is {:?}", x[0][1]);
     let mut store = HashMap::<i32,i32>::new();
     for (index,val) in nums.iter().enumerate(){
         match store.get(val){
