@@ -5,6 +5,12 @@ fn main() {
     println!("The {:?}", y.next());
     println!("The {:?}", y.next());
 
+    let a = "sam".to_string();
+    let b = a.chars();
+    for i in b{
+        println!("{i}");
+    }
+
     // let z = y.enumerate();
     // println!("Z is : {:?}", z);
 
