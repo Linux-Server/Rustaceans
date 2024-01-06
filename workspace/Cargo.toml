@@ -1,0 +1,8 @@
+[workspace]
+members = ["server"]
+
+resolver= "2"
+
+
+[workspace.lints.rust]
+dead_code = "allow"
