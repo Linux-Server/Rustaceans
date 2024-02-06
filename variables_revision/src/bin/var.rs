@@ -14,6 +14,8 @@ fn main(){
     const MY_CONSTANT : u32 = 100;
 
     shadow_example();
+    mutability_example();
+    copy_exmaple();
 
 
 }
@@ -22,5 +24,17 @@ fn shadow_example(){
     let num = 10;
     let num = 20;
     println!("The num is : {}", num);
+}
+
+fn mutability_example(){
+    let mut num = 10;
+    num = 30;
+    println!("Ther num is  {:?}", num);
+}
+
+fn copy_exmaple(){
+    let num = 10;
+    let  num2 = num;
+    println!("{num} and {num2}");
 }
 
