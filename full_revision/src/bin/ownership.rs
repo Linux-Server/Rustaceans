@@ -25,4 +25,17 @@ Ownership Rules:
 */
 fn main(){
     println!("hello Ownership");
+    let x = 10;
+    copy_value(x);
+    println!("The value is {:?}", x);
+    let y = String::from("helllo");
+    move_value(y);
+}
+
+fn copy_value(x:i32){
+
+}
+
+fn move_value(data:String){
+    println!("The string is {:?}", data);
 }
